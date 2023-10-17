@@ -6,7 +6,7 @@ const FriendList = ({ friends }) => {
   return (
     <>
       {friends.map(friend => (
-        <li className={styles.item}>
+        <li key={friend.id}className={styles.item}>
           <span
             className={clsx(styles.status, {
               [styles.isOnline]: friend.isOnline,

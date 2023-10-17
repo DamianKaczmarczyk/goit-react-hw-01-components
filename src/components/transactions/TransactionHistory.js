@@ -1,11 +1,10 @@
-import transactions from 'components/transactions/transactions.json';
 import styles from 'components/transactions/transactions.module.css';
 
 const TransactionHistory = ({ transactions }) => {
   return (
     <>
       {transactions.map(transaction => (
-        <tbody>
+        <tbody key={transaction.id}>
           <tr>
             <td>{transaction.type}</td>
             <td>{transaction.amount}</td>
@@ -17,7 +16,7 @@ const TransactionHistory = ({ transactions }) => {
   );
 };
 
-export default function Transaction() {
+export default function Transaction({transaction}) {
   return (
     <table className={styles.transactionHistory}>
       <thead>
@@ -27,7 +26,7 @@ export default function Transaction() {
           <th>Currency</th>
         </tr>
       </thead>
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory transactions={transaction} />
     </table>
   );
 }

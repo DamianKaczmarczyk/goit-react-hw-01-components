@@ -1,7 +1,6 @@
-import user from 'components/profile/user.json';
 import styles from 'components/profile/profile.module.css';
 
-export default function Profile() {
+export default function Profile({user}) {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>

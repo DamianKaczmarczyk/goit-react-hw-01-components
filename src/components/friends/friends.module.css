@@ -1,0 +1,25 @@
+.list {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 18px;
+  width: 200px;
+  text-align: center;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.isOnline {
+  composes: status;
+  background-color: green;
+}

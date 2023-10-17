@@ -1,3 +1,8 @@
+import Profile from './profile/Profile';
+import Statistics from './statistics/Statistics';
+import FriendList from './friends/FriendList';
+import TransactionHistory from './transactions/TransactionHistory';
+
 export const App = () => {
   return (
     <div
@@ -7,10 +12,13 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      <Profile />
+      <Statistics />
+      <FriendList />
+      <TransactionHistory />
     </div>
   );
 };

@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        flexDirection:"column",
         display: 'flex',
         gap:'20px',
         justifyContent: 'center',

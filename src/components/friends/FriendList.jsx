@@ -1,9 +1,9 @@
 import styles from 'components/friends/friends.module.css';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import FriendListItem from"./FriendsListItem";
 
 
-export const FriendList = ({ friends }) => {
+const FriendList = ({friends}) => {
   return (
 <ul className={styles.list}>
 {friends.map(friend => (
@@ -13,14 +13,16 @@ export const FriendList = ({ friends }) => {
 ))}
 </ul>
 )}
-  
+export default FriendList
 
-FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+// ======ZOSTAWIAM KOMENTARZE, BO JAK ODKOMENTUJE TO CONST FRIENDLIST SIĘ GUBI WRAZ Z PROPTYPSAMI=======
 
-FriendList.friend.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-}
+// FriendList.propTypes = {
+//   friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+// };
+
+// FriendList.friend.propTypes = {
+//   avatar: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   isOnline: PropTypes.bool.isRequired,
+// }

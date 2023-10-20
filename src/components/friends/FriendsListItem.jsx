@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import styles from 'components/friends/friends.module.css';
-export const FriendListItem = ({friend})=>
+ const FriendListItem = ({friend})=>
     <>
     <span
       className={clsx(styles.status, {
@@ -15,4 +15,4 @@ export const FriendListItem = ({friend})=>
     />
     <p className="name">{friend.name}</p>
     </>
-    
+    export default FriendListItem

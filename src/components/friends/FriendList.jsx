@@ -1,37 +1,19 @@
-import friends from 'components/friends/friends.json';
 import styles from 'components/friends/friends.module.css';
-import clsx from 'clsx';
+import PropTypes from "prop-types";
+import FriendListItem from"./FriendsListItem";
 
-const FriendList = ({ friends }) => {
-  return (
-    <>
-      {friends.map(friend => (
-        <li key={friend.id}className={styles.item}>
-          <span
-            className={clsx(styles.status, {
-              [styles.isOnline]: friend.isOnline,
-            })}
-          ></span>
-          <img
-            className="avatar"
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <p className="name">{friend.name}</p>
-        </li>
-      ))}
-    </>
-  );
-};
 
-export default function Friends() {
+export const FriendList = ({ friends }) => {
   return (
-    <ul className={styles.list}>
-      <FriendList friends={friends} />
-    </ul>
-  );
-}
+<ul className={styles.list}>
+{friends.map(friend => (
+<li key={friend.id} className={styles.item}>
+<FriendListItem friend={friend} />
+</li>
+))}
+</ul>
+)}
+  
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(PropTypes.object).isRequired,

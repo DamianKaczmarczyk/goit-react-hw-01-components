@@ -2,7 +2,8 @@ import Profile from './profile/Profile';
 import Statistics from './statistics/Statistics';
 import FriendList from './friends/FriendList';
 import TransactionHistory from './transactions/TransactionHistory';
-import friends from './friends/FriendList';
+
+import friends from './friends/friends';
 import data from './statistics/data';
 import user from './profile/user';
 import transaction from './transactions/transactions';

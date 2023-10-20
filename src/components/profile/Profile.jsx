@@ -1,4 +1,5 @@
 import styles from 'components/profile/profile.module.css';
+import PropTypes from "prop-types";
 
 export default function Profile({user}) {
   return (

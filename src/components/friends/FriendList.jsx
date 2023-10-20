@@ -32,3 +32,13 @@ export default function Friends() {
     </ul>
   );
 }
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+FriendList.friend.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+}

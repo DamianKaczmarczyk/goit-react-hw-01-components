@@ -18,3 +18,10 @@ export default function Statistics({stats}) {
     </section>
   );
 }
+Statistics.propTypes = {
+  stat: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+  })),
+};
